@@ -1,0 +1,103 @@
+.intro {
+  text-align: center;
+  padding: 3rem 1rem 2rem;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.headline {
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: var(--primary-dark);
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.subheadline {
+  font-size: 1.1rem;
+  color: var(--gray-600);
+  max-width: 65ch;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+.services {
+  padding: 2rem 1rem 3rem;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.sectionTitle {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--gray-800);
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.serviceGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.ctaWrapper {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.cta {
+  text-align: center;
+  padding: 3rem 1rem;
+  background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+  color: white;
+}
+
+.ctaHeading {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.ctaText {
+  font-size: 1.05rem;
+  max-width: 55ch;
+  margin: 0 auto 1.5rem;
+  opacity: 0.95;
+  line-height: 1.6;
+}
+
+.ctaButton {
+  display: inline-block;
+  padding: 0.75rem 2rem;
+  background: var(--secondary);
+  color: var(--gray-900);
+  font-weight: 700;
+  border-radius: 8px;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.ctaButton:hover {
+  background: var(--secondary-light);
+  transform: translateY(-1px);
+}
+
+@media (max-width: 768px) {
+  .headline {
+    font-size: 1.75rem;
+  }
+
+  .serviceGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .ctaHeading {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .headline {
+    font-size: 1.5rem;
+  }
+}

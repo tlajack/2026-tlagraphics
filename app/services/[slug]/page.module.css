@@ -1,0 +1,132 @@
+.hero {
+  padding: 2rem 1rem;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--primary-dark);
+  margin-bottom: 0.75rem;
+}
+
+.heroDescription {
+  font-size: 1.05rem;
+  color: var(--gray-600);
+  max-width: 65ch;
+  line-height: 1.7;
+}
+
+.subServices {
+  padding: 0 1rem 3rem;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.subService {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: start;
+  padding: 2rem 0;
+  border-bottom: 1px solid var(--gray-200);
+}
+
+.subService:last-child {
+  border-bottom: none;
+}
+
+.subServiceImage {
+  width: 100%;
+  height: auto;
+  border-radius: var(--border-radius);
+  object-fit: cover;
+}
+
+.subServiceContent {
+  padding: 0.5rem 0;
+}
+
+.subServiceTitle {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--gray-800);
+  margin-bottom: 0.75rem;
+}
+
+.subServiceList {
+  padding-left: 1.25rem;
+  color: var(--gray-600);
+  line-height: 1.8;
+}
+
+.subServiceList li {
+  margin-bottom: 0.25rem;
+}
+
+.ctaSection {
+  text-align: center;
+  padding: 3rem 1rem;
+  background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+  color: white;
+}
+
+.ctaTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+.ctaText {
+  max-width: 50ch;
+  margin: 0 auto 1.5rem;
+  opacity: 0.95;
+}
+
+.ctaLinks {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.ctaButton {
+  display: inline-block;
+  padding: 0.75rem 2rem;
+  background: var(--secondary);
+  color: var(--gray-900);
+  font-weight: 700;
+  border-radius: 8px;
+  transition: background 0.2s;
+}
+
+.ctaButton:hover {
+  background: var(--secondary-light);
+}
+
+.ctaButtonSecondary {
+  display: inline-block;
+  padding: 0.75rem 2rem;
+  background: transparent;
+  color: white;
+  font-weight: 700;
+  border-radius: 8px;
+  border: 2px solid white;
+  transition: background 0.2s;
+}
+
+.ctaButtonSecondary:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 1.6rem;
+  }
+
+  .subService {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}

@@ -1,0 +1,235 @@
+.intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 50vh;
+  padding: 3rem 1rem;
+  background-image: url(/images/about/Toronto-Scrapers.jpg);
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+}
+
+.introLogo {
+  width: min(80%, 400px);
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+.tagline {
+  font-size: 1.3rem;
+  font-weight: 300;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 1rem;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.twoCol {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  width: 100%;
+}
+
+.imageCol {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 40%;
+}
+
+.photo {
+  width: 100%;
+  height: auto;
+  border-radius: var(--border-radius);
+}
+
+.textCol {
+  flex: 1;
+  max-width: 65ch;
+}
+
+.textCol p {
+  line-height: 1.7;
+  color: var(--gray-600);
+  margin-bottom: 1rem;
+}
+
+.h1 {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--primary-dark);
+  margin-bottom: 0.5rem;
+}
+
+.h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--gray-800);
+  margin-bottom: 0.5rem;
+}
+
+.hr {
+  height: 4px;
+  background-color: var(--primary);
+  border: none;
+  width: min(100%, 40ch);
+  margin: 0 0 1.5rem;
+}
+
+.hrCenter {
+  margin: 0 auto 1.5rem;
+}
+
+.keySection,
+.promiseSection {
+  background: var(--gray-50);
+  max-width: none;
+  width: 100%;
+  padding: 3rem 1rem;
+}
+
+.advantagesGrid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  max-width: var(--max-width);
+  margin: 1rem auto 0;
+  width: 100%;
+}
+
+.parallelogram {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: min(80%, 600px);
+  min-height: 60px;
+  transform: skew(20deg);
+  background: var(--primary);
+  overflow: hidden;
+  padding: 1rem 2rem;
+}
+
+.parallelogram p {
+  color: white;
+  transform: skew(-20deg);
+  text-align: center;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.processImage {
+  width: 40%;
+  height: auto;
+}
+
+.imagineSection {
+  text-align: center;
+  padding: 3rem 1rem;
+  background-image: url(/images/about/bg-imagine.jpg);
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: var(--gray-600);
+}
+
+.imagineContent {
+  max-width: 65ch;
+  margin: 0 auto 2rem;
+}
+
+.imagineTitle {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--gray-800);
+  margin-bottom: 0.75rem;
+}
+
+.imagineColumns {
+  display: flex;
+  gap: 2rem;
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.imagineColumns p {
+  flex: 1;
+  line-height: 1.6;
+}
+
+.thanksSection {
+  padding: 3rem 1rem;
+  background-image: url(/images/about/bg-thanks.jpg);
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+}
+
+.thanksContent {
+  max-width: 65ch;
+  color: white;
+}
+
+.thanksContent p {
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+.signature {
+  width: 300px;
+  height: auto;
+  margin: 1rem auto 0;
+}
+
+@media (max-width: 768px) {
+  .twoCol {
+    flex-direction: column;
+  }
+
+  .imageCol {
+    max-width: 70%;
+    order: -1;
+  }
+
+  .processImage {
+    width: 70%;
+    margin: 1rem auto 0;
+  }
+
+  .imagineColumns {
+    flex-direction: column;
+  }
+
+  .parallelogram {
+    min-height: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .h1 {
+    font-size: 1.5rem;
+  }
+
+  .introLogo {
+    width: 80%;
+  }
+
+  .imagineTitle {
+    font-size: 1.3rem;
+  }
+}
