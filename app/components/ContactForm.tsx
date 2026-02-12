@@ -5,6 +5,34 @@ import styles from "./ContactForm.module.css";
 
 export default function ContactForm() {
   const [submitted, setSubmitted] = useState(false);
+  const [error, setError] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    setSubmitting(true);
+    setError(false);
+
+    const formData = new FormData(e.currentTarget);
+
+    try {
+      const response = await fetch("/__forms.html", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams(formData as unknown as Record<string, string>).toString(),
+      });
+
+      if (response.ok) {
+        setSubmitted(true);
+      } else {
+        setError(true);
+      }
+    } catch {
+      setError(true);
+    } finally {
+      setSubmitting(false);
+    }
+  }
 
   if (submitted) {
     return (
@@ -21,10 +49,7 @@ export default function ContactForm() {
   return (
     <form
       name="webContact"
-      method="POST"
-      data-netlify="true"
-      netlify-honeypot="bot-field"
-      onSubmit={() => setSubmitted(true)}
+      onSubmit={handleSubmit}
       className={styles.form}
     >
       <input type="hidden" name="form-name" value="webContact" />
@@ -98,8 +123,15 @@ export default function ContactForm() {
         />
       </div>
 
-      <button type="submit" className={styles.button}>
-        Send Message
+      {error && (
+        <p className={styles.error}>
+          Something went wrong. Please try again or email us directly at{" "}
+          <a href="mailto:info@tlagraphics.com">info@tlagraphics.com</a>.
+        </p>
+      )}
+
+      <button type="submit" className={styles.button} disabled={submitting}>
+        {submitting ? "Sending..." : "Send Message"}
       </button>
     </form>
   );
