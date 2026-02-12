@@ -55,6 +55,7 @@ export default function ContactForm() {
       name="webContact"
       onSubmit={handleSubmit}
       className={styles.form}
+      netlify
     >
       <input type="hidden" name="form-name" value="webContact" />
       <div style={{ display: "none" }}>
