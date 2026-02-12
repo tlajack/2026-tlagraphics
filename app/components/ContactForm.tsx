@@ -14,12 +14,16 @@ export default function ContactForm() {
     setError(false);
 
     const formData = new FormData(e.currentTarget);
+    const params = new URLSearchParams();
+    formData.forEach((value, key) => {
+      params.append(key, value.toString());
+    });
 
     try {
-      const response = await fetch("/__forms.html", {
+      const response = await fetch("/", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: new URLSearchParams(formData as unknown as Record<string, string>).toString(),
+        body: params.toString(),
       });
 
       if (response.ok) {
