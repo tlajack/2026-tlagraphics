@@ -47,7 +47,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${openSans.variable} pagemax`} style={{ fontFamily: "var(--font-open-sans), sans-serif" }}>
+      <body className={`${openSans.className} ${openSans.variable} pagemax`}>
         <JsonLd data={getLocalBusinessSchema()} />
         <Navbar />
         <main>{children}</main>
