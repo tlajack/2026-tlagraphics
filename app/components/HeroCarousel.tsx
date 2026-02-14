@@ -38,6 +38,7 @@ export default function HeroCarousel() {
               className={styles.image}
               priority={i === 0}
               fetchPriority={i === 0 ? "high" : undefined}
+              quality={70}
               sizes="100vw"
             />
             <div className={styles.label}>{slide.label}</div>

@@ -26,6 +26,7 @@ export default function ServiceCard({
           width={600}
           height={400}
           className={styles.image}
+          quality={70}
           sizes="(max-width: 768px) 100vw, 50vw"
         />
       </div>
