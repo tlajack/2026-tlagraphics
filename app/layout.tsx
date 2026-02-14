@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Open_Sans } from "next/font/google";
-import { GoogleAnalytics } from "@next/third-parties/google";
+import Script from "next/script";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import JsonLd from "./components/JsonLd";
@@ -52,7 +52,13 @@ export default function RootLayout({
         <Navbar />
         <main>{children}</main>
         <Footer />
-        <GoogleAnalytics gaId="G-VBWE8K4EVR" />
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-VBWE8K4EVR"
+          strategy="lazyOnload"
+        />
+        <Script id="ga-init" strategy="lazyOnload">
+          {`window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-VBWE8K4EVR');`}
+        </Script>
       </body>
     </html>
   );

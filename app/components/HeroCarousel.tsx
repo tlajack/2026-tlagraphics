@@ -28,7 +28,7 @@ export default function HeroCarousel() {
   return (
     <section className={styles.embla} ref={emblaRef} aria-label="Portfolio showcase carousel">
       <div className={styles.container}>
-        {slides.map((slide) => (
+        {slides.map((slide, i) => (
           <div key={slide.src} className={styles.slide}>
             <Image
               src={slide.src}
@@ -36,7 +36,9 @@ export default function HeroCarousel() {
               width={1200}
               height={800}
               className={styles.image}
-              priority={slide === slides[0]}
+              priority={i === 0}
+              fetchPriority={i === 0 ? "high" : undefined}
+              sizes="100vw"
             />
             <div className={styles.label}>{slide.label}</div>
           </div>

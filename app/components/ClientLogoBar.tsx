@@ -34,6 +34,7 @@ export default function ClientLogoBar() {
               height={80}
               className={styles.logo}
               loading="lazy"
+              sizes="120px"
             />
           </div>
         ))}
