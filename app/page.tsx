@@ -1,3 +1,5 @@
+export const revalidate = 86400; // Cache for 24 hours
+
 import Link from "next/link";
 import HeroCarousel from "./components/HeroCarousel";
 import ServiceCard from "./components/ServiceCard";
