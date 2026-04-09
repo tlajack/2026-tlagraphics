@@ -1,4 +1,5 @@
 import Link from "next/link";
+import EmailLink from "./EmailLink";
 import styles from "./Footer.module.css";
 
 export default function Footer() {
@@ -17,9 +18,7 @@ export default function Footer() {
             +1 (905) 726-2600
           </a>
           <br />
-          <a href="mailto:info@tlagraphics.com" className={styles.link}>
-            info@tlagraphics.com
-          </a>
+          <EmailLink email="info@tlagraphics.com" className={styles.link} />
           <br />
           <a
             href="https://www.dropbox.com/request/FL93CCTD7UCysvFI2Pp6"

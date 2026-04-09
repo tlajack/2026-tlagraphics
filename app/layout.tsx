@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { Open_Sans } from "next/font/google";
 import Script from "next/script";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
@@ -7,14 +6,6 @@ import JsonLd from "./components/JsonLd";
 import { getLocalBusinessSchema } from "./lib/structured-data";
 import { BASE_URL, SITE_NAME, DEFAULT_DESCRIPTION } from "./lib/metadata";
 import "./globals.css";
-
-const openSans = Open_Sans({
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "700", "800"],
-  display: "swap",
-  preload: false,
-  variable: "--font-open-sans",
-});
 
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
@@ -48,7 +39,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${openSans.className} ${openSans.variable} pagemax`}>
+      <body className="pagemax">
         <JsonLd data={getLocalBusinessSchema()} />
         <Navbar />
         <main>{children}</main>

@@ -26,11 +26,5 @@
     "eslint": "^9",
     "eslint-config-next": "16.1.6",
     "typescript": "^5"
-  },
-  "browserslist": [
-    "chrome >= 93",
-    "firefox >= 92",
-    "safari >= 15",
-    "edge >= 93"
-  ]
+  }
 }

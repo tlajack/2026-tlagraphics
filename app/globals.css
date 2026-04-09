@@ -33,6 +33,8 @@ body {
 }
 
 body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
   color: var(--gray-800);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
