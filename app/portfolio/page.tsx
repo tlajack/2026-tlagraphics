@@ -1,5 +1,3 @@
-export const revalidate = 86400;
-
 import type { Metadata } from "next";
 import Breadcrumbs from "../components/Breadcrumbs";
 import PortfolioCard from "../components/PortfolioCard";

@@ -1,5 +1,3 @@
-export const revalidate = 86400;
-
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
@@ -96,6 +94,7 @@ export default async function PortfolioProjectPage({ params }: PageProps) {
               width={1200}
               height={800}
               className={styles.image}
+              quality={70}
               priority
             />
           ))}
@@ -122,6 +121,7 @@ export default async function PortfolioProjectPage({ params }: PageProps) {
                   width={400}
                   height={267}
                   className={styles.relatedImage}
+                  quality={70}
                 />
                 <div className={styles.relatedContent}>
                   <h3 className={styles.relatedName}>{rp.title}</h3>

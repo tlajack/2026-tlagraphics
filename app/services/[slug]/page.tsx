@@ -1,5 +1,3 @@
-export const revalidate = 86400;
-
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
@@ -73,6 +71,7 @@ export default async function ServicePage({ params }: PageProps) {
               width={600}
               height={400}
               className={styles.subServiceImage}
+              quality={70}
             />
             <div className={styles.subServiceContent}>
               <h2 className={styles.subServiceTitle}>{sub.title}</h2>
