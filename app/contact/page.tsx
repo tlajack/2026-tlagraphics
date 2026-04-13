@@ -4,14 +4,14 @@ import ContactForm from "../components/ContactForm";
 import styles from "./page.module.css";
 
 export const metadata: Metadata = {
-  title: "Contact Us",
+  title: "Start a Project",
   description:
-    "Get in touch with TLA Graphics for custom signage, graphics, and visual merchandising projects. Located in Uxbridge, Ontario — serving businesses across the GTA and beyond.",
+    "Tell us about your project. TLA Graphics works with OEM manufacturers, fleet operators, facilities teams, and brands across Ontario on custom graphics, signage, and visual merchandising.",
   alternates: { canonical: "/contact" },
   openGraph: {
-    title: "Contact Us | TLA Graphics",
+    title: "Start a Project | TLA Graphics",
     description:
-      "Get in touch with TLA Graphics for custom signage, graphics, and visual merchandising projects.",
+      "Tell us about your project. TLA Graphics works with OEM manufacturers, fleet operators, facilities teams, and brands across Ontario.",
     url: "/contact",
   },
 };
@@ -21,59 +21,29 @@ export default function ContactPage() {
     <>
       <Breadcrumbs items={[{ label: "Contact", href: "/contact" }]} />
 
-      <div className={styles.container}>
-        <section className={styles.info}>
-          <h1 className={styles.title}>Get in Touch</h1>
-          <p className={styles.description}>
-            Have a project in mind? We&apos;d love to hear from you. Reach out
-            using the form or contact us directly.
-          </p>
+      <section className={styles.hero}>
+        <h1 className={styles.title}>Start a Project</h1>
+        <p className={styles.description}>
+          Tell us what you&apos;re working on. The more detail you share, the
+          faster we can come back with a clear plan and quote.
+        </p>
+      </section>
 
-          <div className={styles.details}>
-            <div className={styles.detail}>
-              <h2 className={styles.detailTitle}>Address</h2>
-              <address className={styles.address}>
-                TLA Graphics Ltd.
-                <br />
-                4 Paisley Lane
-                <br />
-                Uxbridge, ON L9P 0G5
-              </address>
-            </div>
+      <section className={styles.formSection}>
+        <ContactForm />
+      </section>
 
-            <div className={styles.detail}>
-              <h2 className={styles.detailTitle}>Phone</h2>
-              <a href="tel:+1-905-726-2600" className={styles.link}>
-                +1 (905) 726-2600
-              </a>
-            </div>
-
-            <div className={styles.detail}>
-              <h2 className={styles.detailTitle}>Email</h2>
-              <a href="mailto:info@tlagraphics.com" className={styles.link}>
-                info@tlagraphics.com
-              </a>
-            </div>
-
-            <div className={styles.detail}>
-              <h2 className={styles.detailTitle}>File Upload</h2>
-              <a
-                href="https://www.dropbox.com/request/FL93CCTD7UCysvFI2Pp6"
-                className={styles.link}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Upload files via Dropbox
-              </a>
-            </div>
-          </div>
-        </section>
-
-        <section className={styles.formSection}>
-          <h2 className={styles.formTitle}>Send Us a Message</h2>
-          <ContactForm />
-        </section>
-      </div>
+      <section className={styles.secondary}>
+        <p>Prefer to reach out directly?</p>
+        <div className={styles.secondaryLinks}>
+          <a href="mailto:info@tlagraphics.ca" className={styles.link}>
+            info@tlagraphics.ca
+          </a>
+          <a href="tel:+1-905-726-2660" className={styles.link}>
+            905-726-2660
+          </a>
+        </div>
+      </section>
     </>
   );
 }
