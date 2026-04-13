@@ -34,7 +34,7 @@ export default function ContactForm() {
     const formData = new FormData(e.currentTarget);
 
     try {
-      const response = await fetch("/", {
+      const response = await fetch("/__forms.html", {
         method: "POST",
         body: formData,
       });
