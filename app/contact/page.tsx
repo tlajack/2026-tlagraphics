@@ -34,7 +34,7 @@ export default function ContactPage() {
       </section>
 
       <section className={styles.secondary}>
-        <p>Prefer to reach out directly?</p>
+        <p>For immediate attention contact Mark directly.</p>
         <div className={styles.secondaryLinks}>
           <a href="mailto:info@tlagraphics.ca" className={styles.link}>
             info@tlagraphics.ca

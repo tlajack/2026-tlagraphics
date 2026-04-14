@@ -13,12 +13,12 @@ export default function Footer() {
           Uxbridge, ON L9P 0G5
         </address>
         <div className={styles.contact}>
-          <a href="tel:+1-905-726-2600" className={styles.link}>
-            +1 (905) 726-2600
+          <a href="tel:+1-905-726-2660" className={styles.link}>
+            +1 (905) 726-2660
           </a>
           <br />
-          <a href="mailto:info@tlagraphics.com" className={styles.link}>
-            info@tlagraphics.com
+          <a href="mailto:info@tlagraphics.ca" className={styles.link}>
+            info@tlagraphics.ca
           </a>
           <br />
           <a

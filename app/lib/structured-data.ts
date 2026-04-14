@@ -11,8 +11,8 @@ export function getLocalBusinessSchema() {
     image: `${BASE_URL}/images/about/tla-logo-tealwhite.png`,
     description:
       "Full-service graphics and signage company specializing in visual merchandising, marketing collateral, decorative graphic films, and custom signage.",
-    telephone: "+1-905-726-2600",
-    email: "info@tlagraphics.com",
+    telephone: "+1-905-726-2660",
+    email: "info@tlagraphics.ca",
     address: {
       "@type": "PostalAddress",
       streetAddress: "4 Paisley Lane",
