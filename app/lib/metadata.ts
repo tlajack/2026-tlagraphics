@@ -1,4 +1,4 @@
-export const BASE_URL = "https://www.tlagraphics.ca";
+export const BASE_URL = "https://tlagraphics.ca";
 
 export const SITE_NAME = "TLA Graphics";
 

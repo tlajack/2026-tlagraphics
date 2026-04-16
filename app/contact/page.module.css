@@ -2,6 +2,7 @@
   max-width: var(--max-width);
   margin: 0 auto;
   padding: 2.5rem 1.5rem 0;
+  text-align: center;
 }
 
 .title {
@@ -15,6 +16,7 @@
   color: var(--gray-600);
   max-width: 580px;
   line-height: 1.7;
+  margin: 0 auto;
 }
 
 .formSection {

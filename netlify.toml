@@ -5,6 +5,19 @@
 [[plugins]]
   package = "@netlify/plugin-nextjs"
 
+# Redirect .com to .ca
+[[redirects]]
+  from = "https://tlagraphics.com/*"
+  to = "https://tlagraphics.ca/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.tlagraphics.com/*"
+  to = "https://tlagraphics.ca/:splat"
+  status = 301
+  force = true
+
 # Redirects from old site structure
 [[redirects]]
   from = "/contactSuccess"
