@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 import Image from "next/image";
@@ -21,9 +22,16 @@ const slides = [
 ];
 
 export default function HeroCarousel() {
-  const [emblaRef] = useEmblaCarousel({ loop: true }, [
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [
     Autoplay({ delay: 6000, rootNode: (emblaRoot: HTMLElement) => emblaRoot.parentElement! }),
   ]);
+
+  useEffect(() => {
+    if (!emblaApi) return;
+    const reinit = () => setTimeout(() => emblaApi.reInit(), 300);
+    window.addEventListener("orientationchange", reinit);
+    return () => window.removeEventListener("orientationchange", reinit);
+  }, [emblaApi]);
 
   return (
     <section className={styles.embla} ref={emblaRef} aria-label="Portfolio showcase carousel">
