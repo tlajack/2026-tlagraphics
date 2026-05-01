@@ -1,0 +1,88 @@
+.article {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 2rem 1rem 3rem;
+}
+
+.header {
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--gray-200);
+}
+
+.industry {
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--primary-dark);
+  margin-bottom: 0.75rem;
+  line-height: 1.2;
+}
+
+.client {
+  font-size: 0.95rem;
+  color: var(--gray-500);
+}
+
+.body {
+  max-width: 70ch;
+  font-size: 1.05rem;
+  color: var(--gray-700);
+  line-height: 1.75;
+}
+
+.body p {
+  margin-bottom: 1.25rem;
+}
+
+.body p:last-child {
+  margin-bottom: 0;
+  font-weight: 500;
+  color: var(--gray-800);
+}
+
+.ctaSection {
+  text-align: center;
+  padding: 3rem 1rem;
+  background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+  color: white;
+}
+
+.ctaTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.ctaText {
+  margin-bottom: 1.5rem;
+  opacity: 0.95;
+}
+
+.ctaButton {
+  display: inline-block;
+  padding: 0.75rem 2rem;
+  background: var(--secondary);
+  color: var(--gray-900);
+  font-weight: 700;
+  border-radius: 8px;
+  transition: background 0.2s;
+}
+
+.ctaButton:hover {
+  background: var(--secondary-light);
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 1.6rem;
+  }
+}

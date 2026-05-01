@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 import { BASE_URL } from "./lib/metadata";
 import { portfolioProjects } from "./lib/portfolio-data";
+import { caseStudies } from "./lib/case-studies-data";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes: MetadataRoute.Sitemap = [
@@ -13,6 +14,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE_URL}/portfolio`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
     { url: `${BASE_URL}/about`, lastModified: new Date(), changeFrequency: "yearly", priority: 0.6 },
     { url: `${BASE_URL}/contact`, lastModified: new Date(), changeFrequency: "yearly", priority: 0.6 },
+    { url: `${BASE_URL}/case-studies`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
   ];
 
   const portfolioRoutes: MetadataRoute.Sitemap = portfolioProjects.map(
@@ -24,5 +26,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     })
   );
 
-  return [...staticRoutes, ...portfolioRoutes];
+  const caseStudyRoutes: MetadataRoute.Sitemap = caseStudies.map((cs) => ({
+    url: `${BASE_URL}/case-studies/${cs.slug}`,
+    lastModified: new Date(),
+    changeFrequency: "monthly" as const,
+    priority: 0.7,
+  }));
+
+  return [...staticRoutes, ...portfolioRoutes, ...caseStudyRoutes];
 }
