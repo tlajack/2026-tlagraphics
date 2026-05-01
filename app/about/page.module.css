@@ -135,6 +135,35 @@
   height: auto;
 }
 
+.bulletList {
+  list-style: disc;
+  padding-left: 1.25rem;
+  margin-bottom: 1rem;
+  color: var(--gray-600);
+  line-height: 1.7;
+}
+
+.bulletList li {
+  margin-bottom: 0.35rem;
+}
+
+.sectionIntro {
+  color: var(--gray-600);
+  max-width: 65ch;
+  text-align: center;
+  margin-bottom: 0.5rem;
+  line-height: 1.7;
+}
+
+.sectionOutro {
+  color: var(--gray-600);
+  max-width: 65ch;
+  text-align: center;
+  margin-top: 1.5rem;
+  font-style: italic;
+  line-height: 1.7;
+}
+
 .imagineSection {
   text-align: center;
   padding: 3rem 1rem;

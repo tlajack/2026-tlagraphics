@@ -7,12 +7,12 @@ import styles from "./page.module.css";
 export const metadata: Metadata = {
   title: "About Us",
   description:
-    "Learn about TLA Graphics — a second-generation family business delivering high-end visual communication, graphics production, and signage solutions from Uxbridge, Ontario.",
+    "TLA Graphics specializes in the design, production, and implementation of large-scale graphics and branding systems for manufacturing, fleet, and multi-location environments.",
   alternates: { canonical: "/about" },
   openGraph: {
     title: "About Us | TLA Graphics",
     description:
-      "Learn about TLA Graphics — a second-generation family business delivering high-end visual communication and signage solutions.",
+      "TLA Graphics specializes in large-scale graphics and branding systems for manufacturing, fleet, and multi-location environments.",
     url: "/about",
   },
 };
@@ -32,7 +32,7 @@ export default function AboutPage() {
           priority
         />
         <p className={styles.tagline}>
-          Transforming Ideas into Stunning Visuals
+          Structure. Consistency. Precision.
         </p>
       </section>
 
@@ -41,14 +41,14 @@ export default function AboutPage() {
           <div className={styles.imageCol}>
             <Image
               src="/images/about/whoweare-01.jpg"
-              alt="TLA Graphics design studio with production equipment"
+              alt="TLA Graphics production facility"
               width={500}
               height={350}
               className={styles.photo}
             />
             <Image
               src="/images/about/whoweare-02.png"
-              alt="TLA Graphics wide-format printer producing signage"
+              alt="TLA Graphics wide-format production"
               width={500}
               height={350}
               className={styles.photo}
@@ -58,48 +58,39 @@ export default function AboutPage() {
             <h1 className={styles.h1}>Who We Are</h1>
             <hr className={styles.hr} />
             <p>
-              TLA Graphics is a tight-knit team of strategic visual
-              communicators who work hard to clarify your desired outcome,
-              understand your unique challenges, and translate the resulting
-              ideas into stunning visuals that communicate your brand.
+              TLA Graphics is a focused team specializing in the design,
+              production, and implementation of large-scale graphics and
+              branding systems.
+            </p>
+            <p>
+              We work with organizations that operate across multiple assets,
+              locations, and environments — bringing structure, clarity, and
+              consistency to every visual application.
             </p>
           </div>
         </div>
       </section>
 
       <section className={`${styles.section} ${styles.keySection}`}>
-        <h2 className={styles.h2}>Key Advantages</h2>
-        <div className={styles.advantagesGrid}>
-          <div className={styles.parallelogram}>
-            <p>High end production equipment</p>
-          </div>
-          <div className={styles.parallelogram}>
-            <p>Printing 98.3% of Pantone colours</p>
-          </div>
-          <div className={styles.parallelogram}>
-            <p>Deep expertise in innovation</p>
-          </div>
-          <div className={styles.parallelogram}>
-            <p>Second generation family business</p>
-          </div>
-          <div className={styles.parallelogram}>
-            <p>3M Preferred Partner &amp; Trulife partner</p>
-          </div>
-        </div>
-      </section>
-
-      <section className={styles.section}>
         <div className={styles.twoCol}>
           <div className={styles.textCol}>
             <h2 className={styles.h2}>What We Do</h2>
             <hr className={styles.hr} />
             <p>
-              Clients call us graphic engineers and strategic partners, but at
-              the end of the day we simply take care of every visual need for
-              your business, inside and out. We bring your ideas to life by
-              running them through our internal innovation process while pushing
-              the physical limits of media to create stunning visual products
-              that support your brand.
+              We develop and execute complete graphics programs across:
+            </p>
+            <ul className={styles.bulletList}>
+              <li>Manufacturing environments</li>
+              <li>Fleet vehicle systems</li>
+              <li>Multi-location facilities</li>
+            </ul>
+            <p>
+              Our work is not project-based alone — it is system-driven.
+            </p>
+            <p>
+              Each solution is designed to integrate seamlessly into your
+              operations, ensuring consistent results whether applied once or
+              across hundreds of assets.
             </p>
           </div>
           <Image
@@ -117,113 +108,86 @@ export default function AboutPage() {
           <div className={styles.imageCol}>
             <Image
               src="/images/about/whychooseus-01.jpg"
-              alt="Zund precision cutter at TLA Graphics production facility"
+              alt="Precision cutting at TLA Graphics production facility"
               width={400}
               height={300}
               className={styles.photo}
             />
             <Image
               src="/images/about/whychooseus-02.png"
-              alt="TLA Graphics meeting room for client consultations"
+              alt="TLA Graphics client consultation"
               width={400}
               height={300}
               className={styles.photo}
             />
           </div>
           <div className={styles.textCol}>
-            <h2 className={styles.h2}>Why Choose Us</h2>
+            <h2 className={styles.h2}>How We Work</h2>
             <hr className={styles.hr} />
             <p>
-              Our intense focus on attention to detail, exquisite production
-              quality and lightning fast speed underpin everything we do.
+              Every project is approached with a clear objective: deliver a
+              repeatable, high-performance result.
             </p>
+            <p>This includes:</p>
+            <ul className={styles.bulletList}>
+              <li>Understanding operational constraints</li>
+              <li>Aligning with brand and architectural intent</li>
+              <li>Executing with precision across all applications</li>
+            </ul>
             <p>
-              As your graphics partner, you can depend on our expert team going
-              above and beyond to breathe new life into an existing product or
-              solve a new challenge with a creative solution. And we&apos;re on time,
-              every time.
+              From concept through installation, we maintain control over
+              quality, consistency, and outcome.
             </p>
           </div>
         </div>
       </section>
 
-      <section className={`${styles.section} ${styles.promiseSection}`}>
-        <h2 className={styles.h2}>Our Promise to You</h2>
+      <section className={`${styles.section} ${styles.keySection}`}>
+        <h2 className={styles.h2}>Why TLA Graphics</h2>
+        <p className={styles.sectionIntro}>
+          Clients rely on us not only for execution, but for structure.
+        </p>
         <div className={styles.advantagesGrid}>
           <div className={styles.parallelogram}>
-            <p>Never sacrifice speed over quality</p>
+            <p>Consistent reproduction across all applications</p>
           </div>
           <div className={styles.parallelogram}>
-            <p>Meticulous attention to detail</p>
+            <p>Integration into real-world environments</p>
           </div>
           <div className={styles.parallelogram}>
-            <p>Multiple eyes checking every project</p>
+            <p>Reliable timelines and delivery</p>
           </div>
           <div className={styles.parallelogram}>
-            <p>Cutting-edge technology</p>
+            <p>A detail-driven approach at every stage</p>
+          </div>
+        </div>
+        <p className={styles.sectionOutro}>
+          We are engaged as a long-term partner — not just a vendor.
+        </p>
+      </section>
+
+      <section className={styles.section}>
+        <h2 className={styles.h2}>Our Standard</h2>
+        <p className={styles.sectionIntro}>
+          We do not separate speed from quality. Every project is produced with:
+        </p>
+        <div className={styles.advantagesGrid}>
+          <div className={styles.parallelogram}>
+            <p>Careful attention to detail</p>
+          </div>
+          <div className={styles.parallelogram}>
+            <p>Multiple levels of review</p>
+          </div>
+          <div className={styles.parallelogram}>
+            <p>Proven production methods</p>
+          </div>
+          <div className={styles.parallelogram}>
+            <p>A commitment to getting it right the first time</p>
           </div>
         </div>
       </section>
 
       <ClientLogoBar />
-
-      <section className={styles.imagineSection}>
-        <div className={styles.imagineContent}>
-          <h2 className={styles.imagineTitle}>
-            You imagine it, we produce it.
-          </h2>
-          <hr className={`${styles.hr} ${styles.hrCenter}`} />
-          <p>
-            We provide creative solutions for a multitude of truly unique and
-            custom projects. From custom single-piece orders to duplicates in
-            the thousands — we do it all!
-          </p>
-        </div>
-        <div className={styles.imagineColumns}>
-          <p>
-            Our no-boundaries approach to a project ensures success in
-            developing exclusive and one of a kind experiences to fit your
-            brand purpose.
-          </p>
-          <p>
-            At TLA Graphics we recognize the needs of a brand as
-            individualistic and unlike anything else. We acknowledge these
-            differences by implementing a process which operates in this same
-            way. No two projects are alike and we persistently encourage new
-            challenges and push the limits of what is possible.
-          </p>
-          <p>
-            If you have a project in mind please discuss it with us and
-            we&apos;ll be happy to find the correct process and materials specific
-            to your unique brand needs.
-          </p>
-        </div>
-      </section>
-
-      <section className={styles.thanksSection}>
-        <div className={styles.thanksContent}>
-          <p>
-            I would personally like to thank you for this opportunity. TLA&apos;s
-            objective is to become a valued resource partner that can assist
-            with your team&apos;s challenging development strategies, client
-            deliverables, as well as the demands of driving new business. We
-            understand that every project must hit its mark.
-          </p>
-          <p>
-            As president of TLA Graphics I can promise that everyone is here
-            to provide support to you and your team. We will work tirelessly
-            to earn your trust.
-          </p>
-          <p>Sincerely, Mark White</p>
-          <Image
-            src="/images/about/Mark-signature.png"
-            alt="Signature of Mark White, President of TLA Graphics"
-            width={300}
-            height={80}
-            className={styles.signature}
-          />
-        </div>
-      </section>
     </>
   );
 }
