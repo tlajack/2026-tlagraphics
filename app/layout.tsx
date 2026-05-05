@@ -30,9 +30,6 @@ export const metadata: Metadata = {
   alternates: {
     canonical: BASE_URL,
   },
-  other: {
-    "theme-color": "#00a19b",
-  },
 };
 
 export default function RootLayout({
@@ -42,6 +39,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <meta name="theme-color" content="#00a19b" />
+      </head>
       <body className="pagemax">
         <JsonLd data={getLocalBusinessSchema()} />
         <Navbar />
