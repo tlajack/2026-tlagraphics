@@ -30,6 +30,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: BASE_URL,
   },
+  other: {
+    "theme-color": "#00a19b",
+  },
 };
 
 export default function RootLayout({
