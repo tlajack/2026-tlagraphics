@@ -44,9 +44,11 @@ export default function RootLayout({
       </head>
       <body className="pagemax">
         <JsonLd data={getLocalBusinessSchema()} />
-        <Navbar />
-        <main>{children}</main>
-        <Footer />
+        <div style={{ backgroundColor: "white" }}>
+          <Navbar />
+          <main>{children}</main>
+          <Footer />
+        </div>
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-VBWE8K4EVR"
           strategy="lazyOnload"
