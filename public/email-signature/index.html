@@ -25,7 +25,7 @@
 <body>
 <main>
   <h1>TLA Email Signatures</h1>
-  <p class="intro">Click <strong>Copy signature</strong>, then paste into your mail client's signature settings (Gmail, Apple Mail, Outlook). Use <strong>Copy HTML</strong> for clients that take raw HTML. Logos load from <code>https://www.tlagraphics.ca/email-signature/</code>, so this folder must be live on the production site before the images show up for recipients.</p>
+  <p class="intro">Click <strong>Copy signature</strong>, then paste into your mail client's signature settings (Gmail, Apple Mail, Outlook). Use <strong>Copy HTML</strong> for clients that take raw HTML. Logos load from <code>https://tlagraphics.ca/email-signature/</code>, so this folder must be live on the production site before the images show up for recipients.</p>
 
   <section>
     <p class="label">01 — Stacked</p>
@@ -49,7 +49,7 @@
 <!-- 01 Stacked: horizontal logo over details -->
 <template id="sig-stacked">
 <table cellpadding="0" cellspacing="0" border="0" role="presentation" style="border-collapse:collapse;font-family:'Ancizar Sans',Arial,Helvetica,sans-serif;color:#0C1516;">
-  <tr><td style="padding:0 0 14px 0;"><a href="https://www.tlagraphics.ca" style="text-decoration:none;"><img src="https://www.tlagraphics.ca/email-signature/tla-logo-horizontal.png" width="240" height="35" alt="TLA Graphics" style="display:block;border:0;width:240px;height:35px;"></a></td></tr>
+  <tr><td style="padding:0 0 14px 0;"><a href="https://www.tlagraphics.ca" style="text-decoration:none;"><img src="https://tlagraphics.ca/email-signature/tla-logo-horizontal.png" width="240" height="35" alt="TLA Graphics" style="display:block;border:0;width:240px;height:35px;"></a></td></tr>
   <tr><td style="padding:0 0 12px 0;line-height:0;font-size:0;"><table cellpadding="0" cellspacing="0" border="0" role="presentation"><tr><td width="32" height="3" bgcolor="#FFD400" style="width:32px;height:3px;background:#FFD400;line-height:3px;font-size:0;">&nbsp;</td></tr></table></td></tr>
   <tr><td style="font-size:17px;line-height:22px;font-weight:bold;color:#0C1516;">Jack So</td></tr>
   <tr><td style="padding:0 0 10px 0;font-size:13px;line-height:20px;color:#007571;letter-spacing:1px;text-transform:uppercase;">Designer</td></tr>
@@ -63,7 +63,7 @@
 <template id="sig-side">
 <table cellpadding="0" cellspacing="0" border="0" role="presentation" style="border-collapse:collapse;font-family:'Ancizar Sans',Arial,Helvetica,sans-serif;color:#0C1516;">
   <tr>
-    <td valign="middle" style="padding:0 20px 0 0;"><a href="https://www.tlagraphics.ca" style="text-decoration:none;"><img src="https://www.tlagraphics.ca/email-signature/tla-logo-stacked.png" width="125" height="80" alt="TLA Graphics" style="display:block;border:0;width:125px;height:80px;"></a></td>
+    <td valign="middle" style="padding:0 20px 0 0;"><a href="https://www.tlagraphics.ca" style="text-decoration:none;"><img src="https://tlagraphics.ca/email-signature/tla-logo-stacked.png" width="125" height="80" alt="TLA Graphics" style="display:block;border:0;width:125px;height:80px;"></a></td>
     <td valign="middle" style="padding:2px 0 2px 20px;border-left:2px solid #00A19B;">
       <table cellpadding="0" cellspacing="0" border="0" role="presentation" style="border-collapse:collapse;">
         <tr><td style="font-size:17px;line-height:22px;font-weight:bold;color:#0C1516;">Jack So</td></tr>
@@ -82,7 +82,7 @@
 <template id="sig-compact">
 <table cellpadding="0" cellspacing="0" border="0" role="presentation" style="border-collapse:collapse;font-family:'Ancizar Sans',Arial,Helvetica,sans-serif;color:#0C1516;">
   <tr>
-    <td valign="top" style="padding:2px 14px 0 0;"><a href="https://www.tlagraphics.ca" style="text-decoration:none;"><img src="https://www.tlagraphics.ca/email-signature/tla-icon.png" width="44" height="44" alt="TLA" style="display:block;border:0;width:44px;height:44px;"></a></td>
+    <td valign="top" style="padding:2px 14px 0 0;"><a href="https://www.tlagraphics.ca" style="text-decoration:none;"><img src="https://tlagraphics.ca/email-signature/tla-icon.png" width="44" height="44" alt="TLA" style="display:block;border:0;width:44px;height:44px;"></a></td>
     <td valign="top" style="border-top:3px solid #FFD400;padding:6px 0 0 0;">
       <div style="font-size:15px;line-height:20px;color:#0C1516;"><strong>Jack So</strong>&nbsp;&nbsp;<span style="color:#00A19B;">/</span>&nbsp;&nbsp;<span style="color:#007571;">Designer, TLA Graphics</span></div>
       <div style="font-size:12px;line-height:18px;color:#2A3839;">4 Paisley Lane, Uxbridge, ON&nbsp;&nbsp;L9P&nbsp;0G5&nbsp;&nbsp;<span style="color:#00A19B;">/</span>&nbsp;&nbsp;<a href="tel:+19057262600" style="color:#2A3839;text-decoration:none;">(905)&nbsp;726-2600</a>&nbsp;&nbsp;<span style="color:#00A19B;">/</span>&nbsp;&nbsp;<a href="https://www.tlagraphics.ca" style="color:#007571;text-decoration:none;font-weight:bold;">tlagraphics.ca</a></div>
@@ -93,8 +93,8 @@
 
 <script>
   // Preview with local images when not served from production; copies always use absolute URLs.
-  const PROD = 'https://www.tlagraphics.ca/email-signature/';
-  const local = location.hostname !== 'www.tlagraphics.ca';
+  const PROD = 'https://tlagraphics.ca/email-signature/';
+  const local = !location.hostname.endsWith('tlagraphics.ca');
   const html = id => document.getElementById(id).innerHTML.trim();
 
   document.querySelectorAll('[data-sig]').forEach(stage => {
