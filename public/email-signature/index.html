@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TLA Email Signatures</title>
+<meta name="robots" content="noindex">
+<style>
+  :root { --ink: #0C1516; --paper: #F6F5F1; --teal: #00A19B; --teal-700: #007571; --lucy: #FFD400; --line: #DAD8D0; }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--paper); color: var(--ink); font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+  main { max-width: 880px; margin: 0 auto; padding: 48px 16px 96px; }
+  h1 { font-size: 28px; margin: 0 0 8px; }
+  .intro { color: #2A3839; margin: 0 0 40px; line-height: 1.5; }
+  .intro code { font-size: 13px; background: #fff; padding: 1px 5px; border-radius: 2px; }
+  section { margin-bottom: 40px; }
+  .label { font: 500 12px/1 ui-monospace, "IBM Plex Mono", monospace; letter-spacing: .14em; text-transform: uppercase; color: var(--teal-700); margin: 0 0 12px; }
+  .stage { background: #fff; border: 1px solid var(--line); border-radius: 2px; padding: 32px 24px; overflow-x: auto; }
+  .actions { display: flex; gap: 8px; margin-top: 12px; flex-wrap: wrap; }
+  button { font: 500 14px system-ui, sans-serif; padding: 10px 16px; border-radius: 2px; border: 1px solid var(--ink); background: var(--ink); color: #fff; cursor: pointer; }
+  button.ghost { background: transparent; color: var(--ink); }
+  button.done { background: var(--teal-700); border-color: var(--teal-700); color: #fff; }
+</style>
+</head>
+<body>
+<main>
+  <h1>TLA Email Signatures</h1>
+  <p class="intro">Click <strong>Copy signature</strong>, then paste into your mail client's signature settings (Gmail, Apple Mail, Outlook). Use <strong>Copy HTML</strong> for clients that take raw HTML. Logos load from <code>https://www.tlagraphics.ca/email-signature/</code>, so this folder must be live on the production site before the images show up for recipients.</p>
+
+  <section>
+    <p class="label">01 — Stacked</p>
+    <div class="stage" data-sig="sig-stacked"></div>
+    <div class="actions"><button data-copy="sig-stacked">Copy signature</button><button class="ghost" data-copy-html="sig-stacked">Copy HTML</button></div>
+  </section>
+
+  <section>
+    <p class="label">02 — Side by side</p>
+    <div class="stage" data-sig="sig-side"></div>
+    <div class="actions"><button data-copy="sig-side">Copy signature</button><button class="ghost" data-copy-html="sig-side">Copy HTML</button></div>
+  </section>
+
+  <section>
+    <p class="label">03 — Compact</p>
+    <div class="stage" data-sig="sig-compact"></div>
+    <div class="actions"><button data-copy="sig-compact">Copy signature</button><button class="ghost" data-copy-html="sig-compact">Copy HTML</button></div>
+  </section>
+</main>
+
+<!-- 01 Stacked: horizontal logo over details -->
+<template id="sig-stacked">
+<table cellpadding="0" cellspacing="0" border="0" role="presentation" style="border-collapse:collapse;font-family:'Ancizar Sans',Arial,Helvetica,sans-serif;color:#0C1516;">
+  <tr><td style="padding:0 0 14px 0;"><a href="https://www.tlagraphics.ca" style="text-decoration:none;"><img src="https://www.tlagraphics.ca/email-signature/tla-logo-horizontal.png" width="240" height="35" alt="TLA Graphics" style="display:block;border:0;width:240px;height:35px;"></a></td></tr>
+  <tr><td style="padding:0 0 12px 0;line-height:0;font-size:0;"><table cellpadding="0" cellspacing="0" border="0" role="presentation"><tr><td width="32" height="3" bgcolor="#FFD400" style="width:32px;height:3px;background:#FFD400;line-height:3px;font-size:0;">&nbsp;</td></tr></table></td></tr>
+  <tr><td style="font-size:17px;line-height:22px;font-weight:bold;color:#0C1516;">Jack So</td></tr>
+  <tr><td style="padding:0 0 10px 0;font-size:13px;line-height:20px;color:#007571;letter-spacing:1px;text-transform:uppercase;">Designer</td></tr>
+  <tr><td style="font-size:13px;line-height:20px;color:#2A3839;">4 Paisley Lane, Uxbridge, ON&nbsp;&nbsp;L9P&nbsp;0G5</td></tr>
+  <tr><td style="font-size:13px;line-height:20px;color:#2A3839;">tel:&nbsp;<a href="tel:+19057262600" style="color:#2A3839;text-decoration:none;">(905)&nbsp;726-2600</a></td></tr>
+  <tr><td style="font-size:13px;line-height:20px;"><a href="https://www.tlagraphics.ca" style="color:#007571;text-decoration:none;font-weight:bold;">www.tlagraphics.ca</a></td></tr>
+</table>
+</template>
+
+<!-- 02 Side by side: stacked logo | teal rule | details -->
+<template id="sig-side">
+<table cellpadding="0" cellspacing="0" border="0" role="presentation" style="border-collapse:collapse;font-family:'Ancizar Sans',Arial,Helvetica,sans-serif;color:#0C1516;">
+  <tr>
+    <td valign="middle" style="padding:0 20px 0 0;"><a href="https://www.tlagraphics.ca" style="text-decoration:none;"><img src="https://www.tlagraphics.ca/email-signature/tla-logo-stacked.png" width="125" height="80" alt="TLA Graphics" style="display:block;border:0;width:125px;height:80px;"></a></td>
+    <td valign="middle" style="padding:2px 0 2px 20px;border-left:2px solid #00A19B;">
+      <table cellpadding="0" cellspacing="0" border="0" role="presentation" style="border-collapse:collapse;">
+        <tr><td style="font-size:17px;line-height:22px;font-weight:bold;color:#0C1516;">Jack So</td></tr>
+        <tr><td style="padding:0 0 8px 0;font-size:13px;line-height:20px;color:#007571;letter-spacing:1px;text-transform:uppercase;">Designer&nbsp;<span style="color:#FFD400;">&#9650;</span></td></tr>
+        <tr><td style="font-size:13px;line-height:19px;color:#2A3839;">4 Paisley Lane</td></tr>
+        <tr><td style="font-size:13px;line-height:19px;color:#2A3839;">Uxbridge, ON&nbsp;&nbsp;L9P&nbsp;0G5</td></tr>
+        <tr><td style="font-size:13px;line-height:19px;color:#2A3839;">tel:&nbsp;<a href="tel:+19057262600" style="color:#2A3839;text-decoration:none;">(905)&nbsp;726-2600</a></td></tr>
+        <tr><td style="font-size:13px;line-height:19px;"><a href="https://www.tlagraphics.ca" style="color:#007571;text-decoration:none;font-weight:bold;">www.tlagraphics.ca</a></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+</template>
+
+<!-- 03 Compact: icon + two lines, for replies and mobile -->
+<template id="sig-compact">
+<table cellpadding="0" cellspacing="0" border="0" role="presentation" style="border-collapse:collapse;font-family:'Ancizar Sans',Arial,Helvetica,sans-serif;color:#0C1516;">
+  <tr>
+    <td valign="top" style="padding:2px 14px 0 0;"><a href="https://www.tlagraphics.ca" style="text-decoration:none;"><img src="https://www.tlagraphics.ca/email-signature/tla-icon.png" width="44" height="44" alt="TLA" style="display:block;border:0;width:44px;height:44px;"></a></td>
+    <td valign="top" style="border-top:3px solid #FFD400;padding:6px 0 0 0;">
+      <div style="font-size:15px;line-height:20px;color:#0C1516;"><strong>Jack So</strong>&nbsp;&nbsp;<span style="color:#00A19B;">/</span>&nbsp;&nbsp;<span style="color:#007571;">Designer, TLA Graphics</span></div>
+      <div style="font-size:12px;line-height:18px;color:#2A3839;">4 Paisley Lane, Uxbridge, ON&nbsp;&nbsp;L9P&nbsp;0G5&nbsp;&nbsp;<span style="color:#00A19B;">/</span>&nbsp;&nbsp;<a href="tel:+19057262600" style="color:#2A3839;text-decoration:none;">(905)&nbsp;726-2600</a>&nbsp;&nbsp;<span style="color:#00A19B;">/</span>&nbsp;&nbsp;<a href="https://www.tlagraphics.ca" style="color:#007571;text-decoration:none;font-weight:bold;">tlagraphics.ca</a></div>
+    </td>
+  </tr>
+</table>
+</template>
+
+<script>
+  // Preview with local images when not served from production; copies always use absolute URLs.
+  const PROD = 'https://www.tlagraphics.ca/email-signature/';
+  const local = location.hostname !== 'www.tlagraphics.ca';
+  const html = id => document.getElementById(id).innerHTML.trim();
+
+  document.querySelectorAll('[data-sig]').forEach(stage => {
+    stage.innerHTML = local ? html(stage.dataset.sig).split(PROD).join('') : html(stage.dataset.sig);
+  });
+
+  function flash(btn, text) {
+    const original = btn.textContent;
+    btn.textContent = text; btn.classList.add('done');
+    setTimeout(() => { btn.textContent = original; btn.classList.remove('done'); }, 1600);
+  }
+
+  document.querySelectorAll('[data-copy]').forEach(btn => btn.addEventListener('click', async () => {
+    const markup = html(btn.dataset.copy);
+    try {
+      await navigator.clipboard.write([new ClipboardItem({
+        'text/html': new Blob([markup], { type: 'text/html' }),
+        'text/plain': new Blob([document.querySelector(`[data-sig="${btn.dataset.copy}"]`).innerText], { type: 'text/plain' })
+      })]);
+      flash(btn, 'Copied');
+    } catch (e) { flash(btn, 'Copy failed'); }
+  }));
+
+  document.querySelectorAll('[data-copy-html]').forEach(btn => btn.addEventListener('click', async () => {
+    try { await navigator.clipboard.writeText(html(btn.dataset.copyHtml)); flash(btn, 'Copied'); }
+    catch (e) { flash(btn, 'Copy failed'); }
+  }));
+</script>
+</body>
+</html>
